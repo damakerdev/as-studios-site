@@ -1,7 +1,14 @@
 ---
-const platform="itch.io"
-const username="asstudios"
+import Social from "./Social.astro";
 ---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+</style>
 <footer>
-    <p>Learn more about our projects on <a href={`https://www.${username}.${platform}`}>{platform}</a>!</p>
-</footer>
+    <Social site="itch" username="asstudios" itch={true} />
+    <Social site="youtube" username="asstudios3722" itch={false} />
+</footer> 

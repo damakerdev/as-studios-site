@@ -1,0 +1,14 @@
+---
+const { site, username, itch } = Astro.props;
+---
+
+<a href={itch?`https://${username}.${site}.io`:`https://www.${site}.com/@${username}`}>{site}</a>
+
+<style>
+    a {
+        padding: 0.5rem 1rem;
+        color: #000000;
+        background-color: #ffbb3b;
+        text-decoration: none;
+    }
+</style>
