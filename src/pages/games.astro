@@ -4,11 +4,41 @@ import Layout from "../layouts/Layout.astro";
 const pageTitle="Games"
 ---
 
+
 <Layout>
 	<h1>{pageTitle}</h1>
-    <p>these are our games!</p>
     <ul>
         <li><a href="/posts/candyland">Candyland</a></li>
         <li><a href="/posts/spiritbruh">SpiritBruh</a></li>
     </ul>
 </Layout>
+
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 2rem;
+    }
+
+    li {
+        background-color: #571eac;
+        padding: 15px 20px;
+        transition: 200ms ease;
+    }
+
+    li:hover {
+        border-bottom-left-radius: 20px;    
+        border-bottom-right-radius: 20px;    
+        background-color: #390a80;
+        box-shadow: 0px 4px #390a80, 0px 12px #6c22db;
+    }
+
+    a {
+        color: #ffbb3b;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+</style>
