@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/GamesLayout.astro
 title: SpiritBruh
 author: Gamer
 description: "Wanna play with some spirits wandering around you?"
@@ -8,9 +9,6 @@ image:
 pubDate: 2021-04-20
 tags: ["game","shooter"]
 ---
-
-# SpiritBruh
-Wanna have some adventure with some spirits roaming around you?
 
 If yes, Then make sure to play SpiritBruh where you have to shoot the spirits roaming around you and be safe from them too as they can kill you.
 

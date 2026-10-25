@@ -1,15 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}))
 const pageTitle="Games"
 ---
 
 
-<Layout>
+<Layout pageTitle={pageTitle}>
 	<h1>{pageTitle}</h1>
     <ul>
-        <li><a href="/posts/candyland">Candyland</a></li>
-        <li><a href="/posts/spiritbruh">SpiritBruh</a></li>
+        <!-- <li><a href="/games/candyland">Candyland</a></li>
+        <li><a href="/games/spiritbruh">SpiritBruh</a></li> -->
+        {allGames.map((games:any)=><li><a href={games.url}>{games.frontmatter.title}</a></li>)}
     </ul>
 </Layout>
 

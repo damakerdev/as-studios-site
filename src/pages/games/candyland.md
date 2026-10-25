@@ -1,24 +1,20 @@
 ---
-title: 'Candyland'
+layout: ../../layouts/GamesLayout.astro
+title: Candyland
 pubDate: 2020-12-31
-description: 'Wanna Have some Adventure in CandyLand?'
-author: 'Gamer'
+description: Wanna Have some Adventure in CandyLand?
+author: Gamer
 image:
     url: 'https://img.itch.zone/aW1nLzQyODY2MTMucG5n/315x250%23c/wuZAnH.png'
     alt: 'Candyland Logo'
 tags: ["game","candy","first game"]
 ---
 
-# Candyland
-
-Published on: 2020-12-31
-
 Hey gamers!!! This is our first Game,
 
 Its name is CandyLand.
 
 This game is made for Beginners Circle Game Jam #2.
-
 
 ### Controls:
 Arrow keys to move, Space Bar to jump, Left Shift to sprint.
