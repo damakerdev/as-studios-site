@@ -27,8 +27,7 @@ const { frontmatter } = Astro.props;
     </div>
     <div class="content">
         <slot />
-        <h3>Image</h3>
-        <img class="game-img" src={frontmatter.image.url} width="240" alt={frontmatter.image.alt}>
+        <img class="game-img" src={frontmatter?.screenshot?.url || frontmatter?.image?.url} width="320" alt={frontmatter.image.alt}>
     </div>
     <Footer />
     <script>
@@ -120,6 +119,7 @@ const { frontmatter } = Astro.props;
 
     .game-img {
         border: 2px solid #ffbb3b;
+        margin-top: 2rem;
         align-self: center;
     }
 
