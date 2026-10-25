@@ -24,7 +24,7 @@ body {
 h1 {
     font-size: 3rem;
     font-family: 'Instrument Serif',serif;
-    margin-top: 3rem;
+    margin: 1rem 0;
 }
 
 h1:hover {

@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 const pageTitle="Home"
 
 ---
@@ -8,4 +7,31 @@ const pageTitle="Home"
 <Layout pageTitle={pageTitle}>
 	<h1>AS Studios</h1>
 	<p>Join our world of game development for some cool games.</p>
+	<a class="cta" href="/games/">Learn More!</a>
 </Layout>
+
+<style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;700&display=swap');
+
+	.cta {
+		padding: 10px 20px;
+		font-family: 'Literata',serif;
+		font-size: 1.2rem;
+		letter-spacing: -1px;
+		background-color: #571eac;
+		border: none;
+		text-decoration: none;
+		color: #ffbb3b;
+		transform: scale(0.9);
+		transition: 200ms ease;
+		font-weight: bold;
+	}
+
+	.cta:hover {
+		transform: scale(1);
+		background-color: #ffbb3b;
+		color: #571eac;
+        box-shadow: 0px 8px #1f0740, 0px 12px #ffbb3b;
+	}
+</style>
