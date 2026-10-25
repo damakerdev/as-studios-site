@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 
 const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}))
 const pageTitle="Games"
@@ -11,7 +12,16 @@ const pageTitle="Games"
     <ul>
         <!-- <li><a href="/games/candyland">Candyland</a></li>
         <li><a href="/games/spiritbruh">SpiritBruh</a></li> -->
-        {allGames.map((games:any)=><li><a href={games.url}>{games.frontmatter.title}</a></li>)}
+        {allGames.map((games:any)=>(
+            <a href={games.url} target="_blank">
+                <li>
+                    {games.frontmatter.title}
+                    <div class="overlay">
+                        <Image src={games.frontmatter.image.url} alt={games.frontmatter.image.alt} width="252" height="200" class="img" />
+                    </div>
+                </li>
+            </a>
+        ))}
     </ul>
 </Layout>
 
@@ -24,18 +34,56 @@ const pageTitle="Games"
         gap: 2rem;
     }
 
-    a {
+    li {
+        display: flex;
+        flex-direction: column;
         background-color: #571eac;
         padding: 15px 20px;
         transition: 200ms ease;
         color: #ffbb3b;
-        text-decoration: none;
-        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        transform: scale(0.95);
+        transition: 200ms ease all;
     }
 
-    a:hover {
+    .overlay {
+        background-color: #571eaca9;
+        display: inline-block;
+        transition: 500ms all ease;
+        overflow: hidden;
+    }
+    
+    .overlay img {
+        display: block;
+        opacity: 85%;
+        filter: grayscale(100%);
+        mix-blend-mode: soft-light;
+        transition: 500ms all ease;
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: 400ms ease all;
+    }
+
+    li:hover {
+        transform: scale(1);
         background-color: #390a80;
         box-shadow: 0px 8px #1f0740, 0px 12px #ffbb3b;
     }
 
+    li:hover a {
+        color: #ffbb3b;
+    }
+
+    li:hover img {
+        filter: grayscale(0%);
+        opacity: 100%;
+        mix-blend-mode: normal;
+    }
 </style>
