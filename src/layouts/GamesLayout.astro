@@ -20,9 +20,9 @@ const { frontmatter } = Astro.props;
         <Navigation />
     </nav>
     <h1>{frontmatter.title}</h1>
+    <p class="desc">{frontmatter.description}</p>
     <div class="sub-info">
         <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
-        <p>{frontmatter.description}</p>
         <p>Written by {frontmatter.author}</p>
     </div>
     <div class="content">
@@ -79,10 +79,18 @@ const { frontmatter } = Astro.props;
         font-family: 'Literata', sans-serif;
     }
 
-     h1 {
+    h1 {
         text-align: center;
         font-size: 3rem;
         font-family: 'Instrument Serif', serif;
+    }
+
+    .desc {
+        margin-top: -12px;
+        margin-bottom: 20px;
+        font-style: italic;
+        color: #ffffffaa;
+        font-size: 1.2rem;
     }
 
     h1:hover {
