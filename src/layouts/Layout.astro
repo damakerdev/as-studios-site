@@ -1,5 +1,6 @@
 ---
-const pageTitle=""
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -10,13 +11,12 @@ const pageTitle=""
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>AS Studios</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<Navigation />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
