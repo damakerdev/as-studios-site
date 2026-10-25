@@ -1,7 +1,14 @@
 ---
+import { Image } from "astro:assets";
+import logo from '../../public/logo.png';
+
 ---
+
 <div id="main-menu" class="nav-links">
-    <a href="/">Home</a>
     <a href="/about/">About</a>
+    <a href="/" class="desktop">
+        <Image src={logo} width={58} alt="AS Studios logo"/>
+    </a>
+    <a href="/" class="mobile">Home</a>
     <a href="/games/">Games</a>
 </div>

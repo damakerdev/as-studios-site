@@ -1,14 +1,47 @@
 ---
 import Social from "./Social.astro";
+import { Image } from "astro:assets";
+import footerImg from '../../public/footer.png';
 ---
 <style>
     footer {
         display: flex;
-        gap: 1rem;
+        gap: 3rem;
+        flex-direction: column;
         margin-top: 3rem;
+        align-items: center;
+    }
+
+    .btns {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .footer-img {
+        width: 500px;
+        height: auto;
+    }
+
+    @media (max-width: 540px) {
+        .footer-img {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .footer-img {
+            width: 600px;
+        }
     }
 </style>
 <footer>
-    <Social site="itch" username="asstudios" itch={true} />
-    <Social site="youtube" username="asstudios3722" itch={false} />
+    <Image 
+        src={footerImg} 
+        alt="footer separator img"
+        class="footer-img"
+    />
+    <div class="btns">
+        <Social site="itch" username="asstudios" itch={true} />
+        <Social site="youtube" username="asstudios3722" itch={false} />
+    </div>
 </footer> 

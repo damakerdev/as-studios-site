@@ -22,9 +22,15 @@ body {
 }
 
 h1 {
-    margin: 1rem 0;
     font-size: 3rem;
     font-family: 'Instrument Serif',serif;
+    margin-top: 3rem;
+}
+
+h1:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #ffbb3b;
 }
 
 nav {
@@ -33,6 +39,20 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+p {
+    font-size: 1.3rem;
+    padding: 0 80px;
+    text-align: center;
+}
+
+.mobile {
+    display: block !important;
+}
+
+.desktop {
+    display: none !important;
 }
 
 .menu {
@@ -76,12 +96,13 @@ nav {
 :has(.menu[aria-expanded="true"]) .nav-links {
     display: unset;
 }
+
 @media screen and (min-width: 720px){
     .nav-links {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .nav-links a{
@@ -89,6 +110,18 @@ nav {
     }
     
     .menu {
-        display: none;
+        display: none ;
+    }
+
+    .mobile {
+        display: none !important;
+    }
+
+    .desktop {
+        display: block !important;
+    }
+
+    .desktop:hover {
+        background-color: #1f0740 !important;
     }
 }
