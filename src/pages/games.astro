@@ -52,7 +52,6 @@ const pageTitle="Games"
         background-color: #571eaca9;
         display: inline-block;
         transition: 500ms all ease;
-        overflow: hidden;
     }
     
     .overlay img {
@@ -85,5 +84,11 @@ const pageTitle="Games"
         filter: grayscale(0%);
         opacity: 100%;
         mix-blend-mode: normal;
+    }
+
+    @media screen and (max-width: 720px){
+        ul {   
+            flex-direction: column;
+        }
     }
 </style>
